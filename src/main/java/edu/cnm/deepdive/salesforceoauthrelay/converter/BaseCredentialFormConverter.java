@@ -4,6 +4,8 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.cnm.deepdive.salesforceoauthrelay.model.BaseCredential;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 import org.springframework.http.HttpInputMessage;
 import org.springframework.http.HttpOutputMessage;
@@ -23,6 +25,11 @@ public class BaseCredentialFormConverter extends AbstractHttpMessageConverter<Ba
   @Override
   protected boolean supports(Class<?> aClass) {
     return (BaseCredential.class == aClass);
+  }
+
+  @Override
+  public List<MediaType> getSupportedMediaTypes() {
+    return Arrays.asList(MediaType.APPLICATION_FORM_URLENCODED, MediaType.MULTIPART_FORM_DATA);
   }
 
   @Override
