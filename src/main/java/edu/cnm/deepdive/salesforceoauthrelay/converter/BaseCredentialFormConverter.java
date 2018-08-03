@@ -46,9 +46,9 @@ public class BaseCredentialFormConverter extends AbstractHttpMessageConverter<Ba
       throws IOException, HttpMessageNotWritableException {
       Map<String, Object> map =
           mapper.convertValue(baseCredential, new TypeReference<Map<String, Object>>() {});
-      MultiValueMap<String, Object> mvmap = new LinkedMultiValueMap<>();
-      mvmap.setAll(map);
-      converter.write(mvmap, MediaType.APPLICATION_FORM_URLENCODED, httpOutputMessage);
+      MultiValueMap<String, Object> multiMap = new LinkedMultiValueMap<>();
+      multiMap.setAll(map);
+      converter.write(multiMap, MediaType.APPLICATION_FORM_URLENCODED, httpOutputMessage);
   }
 
 }
