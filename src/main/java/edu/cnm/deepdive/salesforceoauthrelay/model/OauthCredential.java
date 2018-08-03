@@ -1,8 +1,10 @@
 package edu.cnm.deepdive.salesforceoauthrelay.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.URL;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class OauthCredential {
 
   @JsonProperty("access_token")
