@@ -71,5 +71,5 @@ public class OauthCredential {
     this.signature = signature;
   }
 
-  
+
 }
