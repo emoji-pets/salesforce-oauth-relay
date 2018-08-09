@@ -34,7 +34,11 @@
 ## WireFrames
   [Oauth Relay Wireframe](docs/oauthauthentication.pdf)
   
-##
+## Rest API calls
+  [Postman REST API Calls](docs/PostmanAPI.pdf)
+  [Workbench REST API Calls](docs/WorkbenchRest.pdf)
+  
+  
     
    
    
